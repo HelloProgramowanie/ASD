@@ -1,0 +1,780 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Algorytmy i Struktury Danych: Dokumentacja pliku src/algorytmy.c</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Algorytmy i Struktury Danych
+   </div>
+   <div id="projectbrief">Zbiór często używanych algorytmów i struktur danych</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Szukaj','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funkcje</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja pliku algorytmy.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;../header/algorytmy.h&quot;</code><br />
+<code>#include &quot;../header/struktury_danych.h&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;limits.h&gt;</code><br />
+</div>
+<p><a href="../../d7/d65/algorytmy_8c_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:acdff47b5e7ee0d55b4e375d07e27e383"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d65/algorytmy_8c.html#acdff47b5e7ee0d55b4e375d07e27e383">wymien</a> (int *A, int *B)</td></tr>
+<tr class="memdesc:acdff47b5e7ee0d55b4e375d07e27e383"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wymienia wartości dwóch argumentów w jednym miejscu.  <a href="../../d7/d65/algorytmy_8c.html#acdff47b5e7ee0d55b4e375d07e27e383">Więcej...</a><br /></td></tr>
+<tr class="separator:acdff47b5e7ee0d55b4e375d07e27e383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af93a3e771e992079f7545543c4c2ac53"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d65/algorytmy_8c.html#af93a3e771e992079f7545543c4c2ac53">zarezerwuj</a> (int N)</td></tr>
+<tr class="memdesc:af93a3e771e992079f7545543c4c2ac53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zarezerwuje miejsce w pamięci dla łańcuchu liczb całkowitych.  <a href="../../d7/d65/algorytmy_8c.html#af93a3e771e992079f7545543c4c2ac53">Więcej...</a><br /></td></tr>
+<tr class="separator:af93a3e771e992079f7545543c4c2ac53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43583c45824f9bd49caa2adffc28c258"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d65/algorytmy_8c.html#a43583c45824f9bd49caa2adffc28c258">kopiuj</a> (int *A, int *B, int N)</td></tr>
+<tr class="memdesc:a43583c45824f9bd49caa2adffc28c258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kopiuje zawartość łańcuchu liczb całkowytych A do B.  <a href="../../d7/d65/algorytmy_8c.html#a43583c45824f9bd49caa2adffc28c258">Więcej...</a><br /></td></tr>
+<tr class="separator:a43583c45824f9bd49caa2adffc28c258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00e6ff2c204dfaaf300d20d009ba0db9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d65/algorytmy_8c.html#a00e6ff2c204dfaaf300d20d009ba0db9">uzupelnij_losowo</a> (int *A, int N, int MIN, int MAX)</td></tr>
+<tr class="memdesc:a00e6ff2c204dfaaf300d20d009ba0db9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wypelnia lancuh liczb calkowitych losowymi liczbami ze zakresu &lt;MIN;MAX&gt;.  <a href="../../d7/d65/algorytmy_8c.html#a00e6ff2c204dfaaf300d20d009ba0db9">Więcej...</a><br /></td></tr>
+<tr class="separator:a00e6ff2c204dfaaf300d20d009ba0db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aefbfecbb3226b832a2bcf28985e9d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d65/algorytmy_8c.html#a6aefbfecbb3226b832a2bcf28985e9d1">drukuj_lancuch</a> (int *A, int N)</td></tr>
+<tr class="memdesc:a6aefbfecbb3226b832a2bcf28985e9d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wypisze na ekran elementy łańcuchu liczb całkowitych.  <a href="../../d7/d65/algorytmy_8c.html#a6aefbfecbb3226b832a2bcf28985e9d1">Więcej...</a><br /></td></tr>
+<tr class="separator:a6aefbfecbb3226b832a2bcf28985e9d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bb16546c4ee5d6d3dfd9bfa492a04fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d65/algorytmy_8c.html#a5bb16546c4ee5d6d3dfd9bfa492a04fa">sortowanie_przez_wstawianie</a> (int *A, int N)</td></tr>
+<tr class="memdesc:a5bb16546c4ee5d6d3dfd9bfa492a04fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sortowanie przez wstawianie elementów łańcuchu liczb całowitych.  <a href="../../d7/d65/algorytmy_8c.html#a5bb16546c4ee5d6d3dfd9bfa492a04fa">Więcej...</a><br /></td></tr>
+<tr class="separator:a5bb16546c4ee5d6d3dfd9bfa492a04fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57e9ce8780aea04ed6d0326712564fd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d65/algorytmy_8c.html#a57e9ce8780aea04ed6d0326712564fd1">sortowanie_grzebieniowe</a> (int *A, int P, int R)</td></tr>
+<tr class="memdesc:a57e9ce8780aea04ed6d0326712564fd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sortowanie grzebieniowe elementów łańcuchu liczb całowitych.  <a href="../../d7/d65/algorytmy_8c.html#a57e9ce8780aea04ed6d0326712564fd1">Więcej...</a><br /></td></tr>
+<tr class="separator:a57e9ce8780aea04ed6d0326712564fd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab92ddff7189e65b4f03cdfcfa1d8b6b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d65/algorytmy_8c.html#ab92ddff7189e65b4f03cdfcfa1d8b6b3">sortowanie_grzebieniowe_grzeb</a> (int *A, int P, int Q, int R)</td></tr>
+<tr class="memdesc:ab92ddff7189e65b4f03cdfcfa1d8b6b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja pomocnicza do sortowania grzebieniowego.  <a href="../../d7/d65/algorytmy_8c.html#ab92ddff7189e65b4f03cdfcfa1d8b6b3">Więcej...</a><br /></td></tr>
+<tr class="separator:ab92ddff7189e65b4f03cdfcfa1d8b6b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14061d627fc4e9c5503481ba45c53940"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d65/algorytmy_8c.html#a14061d627fc4e9c5503481ba45c53940">sortowanie_babelkowe</a> (int *A, int N)</td></tr>
+<tr class="memdesc:a14061d627fc4e9c5503481ba45c53940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sortowanie bąbelkowe elementów łańcuchu liczb całowitych.  <a href="../../d7/d65/algorytmy_8c.html#a14061d627fc4e9c5503481ba45c53940">Więcej...</a><br /></td></tr>
+<tr class="separator:a14061d627fc4e9c5503481ba45c53940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf06af7f93d4abee39b4cb815ad083c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d65/algorytmy_8c.html#aaf06af7f93d4abee39b4cb815ad083c6">sortowanie_szybkie</a> (int *A, int P, int R)</td></tr>
+<tr class="memdesc:aaf06af7f93d4abee39b4cb815ad083c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sortowanie szybkie elementów łańcuchu liczb całowitych.  <a href="../../d7/d65/algorytmy_8c.html#aaf06af7f93d4abee39b4cb815ad083c6">Więcej...</a><br /></td></tr>
+<tr class="separator:aaf06af7f93d4abee39b4cb815ad083c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3fd27e1b3ebab84380d73fd61a9b775"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d65/algorytmy_8c.html#af3fd27e1b3ebab84380d73fd61a9b775">sortowanie_szybkie_podziel</a> (int *A, int P, int R)</td></tr>
+<tr class="memdesc:af3fd27e1b3ebab84380d73fd61a9b775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja pomocnicza do sortowania szybkiego.  <a href="../../d7/d65/algorytmy_8c.html#af3fd27e1b3ebab84380d73fd61a9b775">Więcej...</a><br /></td></tr>
+<tr class="separator:af3fd27e1b3ebab84380d73fd61a9b775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d937c95f3c13080c86c1539a021aa0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d65/algorytmy_8c.html#a9d937c95f3c13080c86c1539a021aa0d">sortowanie_przez_zliczanie</a> (int *A, int *B, int N, int K)</td></tr>
+<tr class="memdesc:a9d937c95f3c13080c86c1539a021aa0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sortowanie przez zliczanie elementów łańcuchu liczb całowitych o ograniczonej wartości 0&lt;=A[i]&lt;K.  <a href="../../d7/d65/algorytmy_8c.html#a9d937c95f3c13080c86c1539a021aa0d">Więcej...</a><br /></td></tr>
+<tr class="separator:a9d937c95f3c13080c86c1539a021aa0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="a6aefbfecbb3226b832a2bcf28985e9d1" name="a6aefbfecbb3226b832a2bcf28985e9d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aefbfecbb3226b832a2bcf28985e9d1">&#9670;&nbsp;</a></span>drukuj_lancuch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drukuj_lancuch </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wypisze na ekran elementy łańcuchu liczb całkowitych. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>Łańcuch liczb całkowitych </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>Długość łańcuchu </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="../../d7/d65/algorytmy_8c_source.html#l00074">74</a> pliku <a class="el" href="../../d7/d65/algorytmy_8c_source.html">algorytmy.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   75</span>{</div>
+<div class="line"><span class="lineno">   76</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;N;i++){</div>
+<div class="line"><span class="lineno">   77</span>        printf(<span class="stringliteral">&quot;%3d&quot;</span>, A[i]);</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="line"><span class="lineno">   79</span>    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   80</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a43583c45824f9bd49caa2adffc28c258" name="a43583c45824f9bd49caa2adffc28c258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43583c45824f9bd49caa2adffc28c258">&#9670;&nbsp;</a></span>kopiuj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kopiuj </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Kopiuje zawartość łańcuchu liczb całkowytych A do B. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>Łańcuch liczb calkowitych </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">B</td><td>Łańcuch liczb calkowitych </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>Długość łańcuchu </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="../../d7/d65/algorytmy_8c_source.html#l00045">45</a> pliku <a class="el" href="../../d7/d65/algorytmy_8c_source.html">algorytmy.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>{</div>
+<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;N; i++) B[i]=A[i];</div>
+<div class="line"><span class="lineno">   48</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a14061d627fc4e9c5503481ba45c53940" name="a14061d627fc4e9c5503481ba45c53940"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14061d627fc4e9c5503481ba45c53940">&#9670;&nbsp;</a></span>sortowanie_babelkowe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sortowanie_babelkowe </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sortowanie bąbelkowe elementów łańcuchu liczb całowitych. </p>
+<p >Posortuje elementy łańcuchu liczb całowitych A o długości N w jednym miejscu.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">A</td><td>Łańcuch liczb całkowitych </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>Długość łańcuchu </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="../../d7/d65/algorytmy_8c_source.html#l00178">178</a> pliku <a class="el" href="../../d7/d65/algorytmy_8c_source.html">algorytmy.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  179</span>{</div>
+<div class="line"><span class="lineno">  180</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;N; i++){</div>
+<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=N-1; j&gt;i; j--){</div>
+<div class="line"><span class="lineno">  182</span>            <span class="keywordflow">if</span>(A[j]&lt;A[j-1]){</div>
+<div class="line"><span class="lineno">  183</span>                <a class="code hl_function" href="../../d7/d65/algorytmy_8c.html#acdff47b5e7ee0d55b4e375d07e27e383">wymien</a>(&amp;A[j-1], &amp;A[j]);</div>
+<div class="line"><span class="lineno">  184</span>            }</div>
+<div class="line"><span class="lineno">  185</span>        }</div>
+<div class="line"><span class="lineno">  186</span>    }</div>
+<div class="line"><span class="lineno">  187</span>}</div>
+<div class="ttc" id="aalgorytmy_8c_html_acdff47b5e7ee0d55b4e375d07e27e383"><div class="ttname"><a href="../../d7/d65/algorytmy_8c.html#acdff47b5e7ee0d55b4e375d07e27e383">wymien</a></div><div class="ttdeci">void wymien(int *A, int *B)</div><div class="ttdoc">Wymienia wartości dwóch argumentów w jednym miejscu.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d65/algorytmy_8c_source.html#l00014">algorytmy.c:14</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a57e9ce8780aea04ed6d0326712564fd1" name="a57e9ce8780aea04ed6d0326712564fd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57e9ce8780aea04ed6d0326712564fd1">&#9670;&nbsp;</a></span>sortowanie_grzebieniowe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sortowanie_grzebieniowe </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>P</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>R</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sortowanie grzebieniowe elementów łańcuchu liczb całowitych. </p>
+<p >Posortuje elementów łańcuchu liczb całowitych A od elementu nr P do elementu nr R w jednym miejscu.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">A</td><td>Łańcuch liczb całkowitych </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">P</td><td>Indeks elementu początkowego </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">R</td><td>Indeks elementu końcowego </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="../../d7/d65/algorytmy_8c_source.html#l00119">119</a> pliku <a class="el" href="../../d7/d65/algorytmy_8c_source.html">algorytmy.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  120</span>{</div>
+<div class="line"><span class="lineno">  121</span>    <span class="keywordflow">if</span>(P&lt;R){</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordtype">int</span> Q = (P+R)/2;</div>
+<div class="line"><span class="lineno">  123</span>        <a class="code hl_function" href="../../d7/d65/algorytmy_8c.html#a57e9ce8780aea04ed6d0326712564fd1">sortowanie_grzebieniowe</a>(A, P, Q);</div>
+<div class="line"><span class="lineno">  124</span>        <a class="code hl_function" href="../../d7/d65/algorytmy_8c.html#a57e9ce8780aea04ed6d0326712564fd1">sortowanie_grzebieniowe</a>(A, Q+1, R);</div>
+<div class="line"><span class="lineno">  125</span>        <a class="code hl_function" href="../../d7/d65/algorytmy_8c.html#ab92ddff7189e65b4f03cdfcfa1d8b6b3">sortowanie_grzebieniowe_grzeb</a>(A,P,Q,R);</div>
+<div class="line"><span class="lineno">  126</span>    }</div>
+<div class="line"><span class="lineno">  127</span>}</div>
+<div class="ttc" id="aalgorytmy_8c_html_a57e9ce8780aea04ed6d0326712564fd1"><div class="ttname"><a href="../../d7/d65/algorytmy_8c.html#a57e9ce8780aea04ed6d0326712564fd1">sortowanie_grzebieniowe</a></div><div class="ttdeci">void sortowanie_grzebieniowe(int *A, int P, int R)</div><div class="ttdoc">Sortowanie grzebieniowe elementów łańcuchu liczb całowitych.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d65/algorytmy_8c_source.html#l00119">algorytmy.c:119</a></div></div>
+<div class="ttc" id="aalgorytmy_8c_html_ab92ddff7189e65b4f03cdfcfa1d8b6b3"><div class="ttname"><a href="../../d7/d65/algorytmy_8c.html#ab92ddff7189e65b4f03cdfcfa1d8b6b3">sortowanie_grzebieniowe_grzeb</a></div><div class="ttdeci">void sortowanie_grzebieniowe_grzeb(int *A, int P, int Q, int R)</div><div class="ttdoc">Funkcja pomocnicza do sortowania grzebieniowego.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d65/algorytmy_8c_source.html#l00141">algorytmy.c:141</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab92ddff7189e65b4f03cdfcfa1d8b6b3" name="ab92ddff7189e65b4f03cdfcfa1d8b6b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab92ddff7189e65b4f03cdfcfa1d8b6b3">&#9670;&nbsp;</a></span>sortowanie_grzebieniowe_grzeb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sortowanie_grzebieniowe_grzeb </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>P</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>R</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja pomocnicza do sortowania grzebieniowego. </p>
+<p >Posortuje łańcuch liczb całowitych A od elementu nr P do elementu numer R w jednym miejscu.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">A</td><td>Łańcuch liczb całkowitych </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">P</td><td>Indeks elementu początkowego </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Q</td><td>Indeks elementu środkowego </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">R</td><td>Indeks elementu początkowego </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="../../d7/d65/algorytmy_8c_source.html#l00141">141</a> pliku <a class="el" href="../../d7/d65/algorytmy_8c_source.html">algorytmy.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  142</span>{</div>
+<div class="line"><span class="lineno">  143</span>    <span class="keywordtype">int</span> n1 = Q - P + 1;</div>
+<div class="line"><span class="lineno">  144</span>    <span class="keywordtype">int</span> n2 = R - Q;</div>
+<div class="line"><span class="lineno">  145</span>    <span class="keywordtype">int</span>* l=(<span class="keywordtype">int</span>*)malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">int</span>)*(n1+1));</div>
+<div class="line"><span class="lineno">  146</span>    <span class="keywordtype">int</span>* r=(<span class="keywordtype">int</span>*)malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">int</span>)*(n2+1));</div>
+<div class="line"><span class="lineno">  147</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;n1; i++){</div>
+<div class="line"><span class="lineno">  148</span>        l[i] = A[P+i];</div>
+<div class="line"><span class="lineno">  149</span>    }</div>
+<div class="line"><span class="lineno">  150</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0; j&lt;n2; j++){</div>
+<div class="line"><span class="lineno">  151</span>        r[j] = A[Q+j+1];</div>
+<div class="line"><span class="lineno">  152</span>    }</div>
+<div class="line"><span class="lineno">  153</span>    l[n1]=INT_MAX;</div>
+<div class="line"><span class="lineno">  154</span>    r[n2]=INT_MAX;</div>
+<div class="line"><span class="lineno">  155</span>    <span class="keywordtype">int</span> i=0;</div>
+<div class="line"><span class="lineno">  156</span>    <span class="keywordtype">int</span> j=0;</div>
+<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k = P; k&lt;=R; k++){</div>
+<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">if</span>(l[i]&lt;=r[j]){</div>
+<div class="line"><span class="lineno">  159</span>            A[k] = l[i++];</div>
+<div class="line"><span class="lineno">  160</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  161</span>            A[k] = r[j++];</div>
+<div class="line"><span class="lineno">  162</span>        }</div>
+<div class="line"><span class="lineno">  163</span>    }</div>
+<div class="line"><span class="lineno">  164</span>    free(l);</div>
+<div class="line"><span class="lineno">  165</span>    free(r);</div>
+<div class="line"><span class="lineno">  166</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5bb16546c4ee5d6d3dfd9bfa492a04fa" name="a5bb16546c4ee5d6d3dfd9bfa492a04fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bb16546c4ee5d6d3dfd9bfa492a04fa">&#9670;&nbsp;</a></span>sortowanie_przez_wstawianie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sortowanie_przez_wstawianie </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sortowanie przez wstawianie elementów łańcuchu liczb całowitych. </p>
+<p >Posortuje elementy łańcuchu liczb całowitych A o długości N w jednym miejscu.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">A</td><td>Łańcuch liczb całkowitych </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>Długość łańcuchu </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="../../d7/d65/algorytmy_8c_source.html#l00093">93</a> pliku <a class="el" href="../../d7/d65/algorytmy_8c_source.html">algorytmy.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   94</span>{</div>
+<div class="line"><span class="lineno">   95</span>    <span class="keywordtype">int</span> i, j, klucz;</div>
+<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">for</span>(j=1; j&lt;N; j++){</div>
+<div class="line"><span class="lineno">   97</span>        klucz = A[j];</div>
+<div class="line"><span class="lineno">   98</span>        <span class="comment">// wstawianie A[j] do posortowanej tablicy A[0..j-1]</span></div>
+<div class="line"><span class="lineno">   99</span>        i=j-1;</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">while</span>((i&gt;=0) &amp;&amp; (A[i]&gt;klucz)){</div>
+<div class="line"><span class="lineno">  101</span>            A[i+1] = A[i];</div>
+<div class="line"><span class="lineno">  102</span>            i--;            </div>
+<div class="line"><span class="lineno">  103</span>        }</div>
+<div class="line"><span class="lineno">  104</span>        A[i+1]=klucz;</div>
+<div class="line"><span class="lineno">  105</span>    }</div>
+<div class="line"><span class="lineno">  106</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9d937c95f3c13080c86c1539a021aa0d" name="a9d937c95f3c13080c86c1539a021aa0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d937c95f3c13080c86c1539a021aa0d">&#9670;&nbsp;</a></span>sortowanie_przez_zliczanie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sortowanie_przez_zliczanie </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>K</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sortowanie przez zliczanie elementów łańcuchu liczb całowitych o ograniczonej wartości 0&lt;=A[i]&lt;K. </p>
+<p >Posortuje elementów łańcuchu liczb całowitych A o ograniczonej wartości 0&lt;=A[i]&lt;K.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">A</td><td>Łańcuch liczb całkowitych </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">B</td><td>Łańcuch liczb całkowitych </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>Długość łańcuchu </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">K</td><td>Indeks elementu końcowego </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="../../d7/d65/algorytmy_8c_source.html#l00246">246</a> pliku <a class="el" href="../../d7/d65/algorytmy_8c_source.html">algorytmy.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  246</span>                                                             {</div>
+<div class="line"><span class="lineno">  247</span>    <span class="keywordtype">int</span>* C=<a class="code hl_function" href="../../d7/d65/algorytmy_8c.html#af93a3e771e992079f7545543c4c2ac53">zarezerwuj</a>(K);</div>
+<div class="line"><span class="lineno">  248</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;K;i++){</div>
+<div class="line"><span class="lineno">  249</span>        C[i]=0;</div>
+<div class="line"><span class="lineno">  250</span>    }</div>
+<div class="line"><span class="lineno">  251</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0; j&lt;N; j++){</div>
+<div class="line"><span class="lineno">  252</span>        C[A[j]]++;</div>
+<div class="line"><span class="lineno">  253</span>    }</div>
+<div class="line"><span class="lineno">  254</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1;i&lt;K;i++){</div>
+<div class="line"><span class="lineno">  255</span>        C[i] += C[i-1];</div>
+<div class="line"><span class="lineno">  256</span>    }</div>
+<div class="line"><span class="lineno">  257</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=N-1; j&gt;=0; j--){</div>
+<div class="line"><span class="lineno">  258</span>        B[--C[A[j]]] = A[j];</div>
+<div class="line"><span class="lineno">  259</span>    }</div>
+<div class="line"><span class="lineno">  260</span>}</div>
+<div class="ttc" id="aalgorytmy_8c_html_af93a3e771e992079f7545543c4c2ac53"><div class="ttname"><a href="../../d7/d65/algorytmy_8c.html#af93a3e771e992079f7545543c4c2ac53">zarezerwuj</a></div><div class="ttdeci">int * zarezerwuj(int N)</div><div class="ttdoc">Zarezerwuje miejsce w pamięci dla łańcuchu liczb całkowitych.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d65/algorytmy_8c_source.html#l00032">algorytmy.c:32</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aaf06af7f93d4abee39b4cb815ad083c6" name="aaf06af7f93d4abee39b4cb815ad083c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf06af7f93d4abee39b4cb815ad083c6">&#9670;&nbsp;</a></span>sortowanie_szybkie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sortowanie_szybkie </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>P</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>R</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sortowanie szybkie elementów łańcuchu liczb całowitych. </p>
+<p >Posortuje elementów łańcuchu liczb całowitych A od elementu nr P do elementu nr R w jednym miejscu.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">A</td><td>Łańcuch liczb całkowitych </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">P</td><td>Indeks elementu początkowego </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">R</td><td>Indeks elementu końcowego </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="../../d7/d65/algorytmy_8c_source.html#l00200">200</a> pliku <a class="el" href="../../d7/d65/algorytmy_8c_source.html">algorytmy.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  201</span>{</div>
+<div class="line"><span class="lineno">  202</span>    <span class="keywordflow">if</span>(P&lt;R){</div>
+<div class="line"><span class="lineno">  203</span>        <span class="keywordtype">int</span> Q = <a class="code hl_function" href="../../d7/d65/algorytmy_8c.html#af3fd27e1b3ebab84380d73fd61a9b775">sortowanie_szybkie_podziel</a>(A, P, R);</div>
+<div class="line"><span class="lineno">  204</span>        <a class="code hl_function" href="../../d7/d65/algorytmy_8c.html#aaf06af7f93d4abee39b4cb815ad083c6">sortowanie_szybkie</a>(A, P, Q);</div>
+<div class="line"><span class="lineno">  205</span>        <a class="code hl_function" href="../../d7/d65/algorytmy_8c.html#aaf06af7f93d4abee39b4cb815ad083c6">sortowanie_szybkie</a>(A, Q+1, R);</div>
+<div class="line"><span class="lineno">  206</span>    }</div>
+<div class="line"><span class="lineno">  207</span>}</div>
+<div class="ttc" id="aalgorytmy_8c_html_aaf06af7f93d4abee39b4cb815ad083c6"><div class="ttname"><a href="../../d7/d65/algorytmy_8c.html#aaf06af7f93d4abee39b4cb815ad083c6">sortowanie_szybkie</a></div><div class="ttdeci">void sortowanie_szybkie(int *A, int P, int R)</div><div class="ttdoc">Sortowanie szybkie elementów łańcuchu liczb całowitych.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d65/algorytmy_8c_source.html#l00200">algorytmy.c:200</a></div></div>
+<div class="ttc" id="aalgorytmy_8c_html_af3fd27e1b3ebab84380d73fd61a9b775"><div class="ttname"><a href="../../d7/d65/algorytmy_8c.html#af3fd27e1b3ebab84380d73fd61a9b775">sortowanie_szybkie_podziel</a></div><div class="ttdeci">int sortowanie_szybkie_podziel(int *A, int P, int R)</div><div class="ttdoc">Funkcja pomocnicza do sortowania szybkiego.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d65/algorytmy_8c_source.html#l00220">algorytmy.c:220</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af3fd27e1b3ebab84380d73fd61a9b775" name="af3fd27e1b3ebab84380d73fd61a9b775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3fd27e1b3ebab84380d73fd61a9b775">&#9670;&nbsp;</a></span>sortowanie_szybkie_podziel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sortowanie_szybkie_podziel </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>P</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>R</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja pomocnicza do sortowania szybkiego. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">A</td><td>Łańcuch liczb całkowitych </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">P</td><td>Indeks elementu początkowego </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">R</td><td>Indeks elementu końcowego</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Indeks elementu łancuchu A który jest większy od każdego elementu o mniejszym indeksu, oraz mniejszy od każdego elementu o większym indeksu. </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="../../d7/d65/algorytmy_8c_source.html#l00220">220</a> pliku <a class="el" href="../../d7/d65/algorytmy_8c_source.html">algorytmy.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  221</span>{</div>
+<div class="line"><span class="lineno">  222</span>    <span class="keywordtype">int</span> i=P-1;</div>
+<div class="line"><span class="lineno">  223</span>    <span class="keywordtype">int</span> j=R+1;</div>
+<div class="line"><span class="lineno">  224</span>    <span class="keywordflow">while</span>(1){</div>
+<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">do</span> j--; <span class="keywordflow">while</span>(A[j]&gt;A[P]);</div>
+<div class="line"><span class="lineno">  226</span>        <span class="keywordflow">do</span> i++; <span class="keywordflow">while</span>(A[i]&lt;A[P]);</div>
+<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">if</span>(i&lt;j) <a class="code hl_function" href="../../d7/d65/algorytmy_8c.html#acdff47b5e7ee0d55b4e375d07e27e383">wymien</a>(&amp;A[i], &amp;A[j]);</div>
+<div class="line"><span class="lineno">  228</span>        <span class="keywordflow">else</span> <span class="keywordflow">return</span> j;</div>
+<div class="line"><span class="lineno">  229</span>    }</div>
+<div class="line"><span class="lineno">  230</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a00e6ff2c204dfaaf300d20d009ba0db9" name="a00e6ff2c204dfaaf300d20d009ba0db9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00e6ff2c204dfaaf300d20d009ba0db9">&#9670;&nbsp;</a></span>uzupelnij_losowo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uzupelnij_losowo </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>MIN</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>MAX</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wypelnia lancuh liczb calkowitych losowymi liczbami ze zakresu &lt;MIN;MAX&gt;. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">A</td><td>Łańcuch liczb calkowitych </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>Długość łańcuchu </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">MIN</td><td>Najmniejsza wartość co może się pojawić </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">MAX</td><td>Największa wartość co może się pojawić </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="../../d7/d65/algorytmy_8c_source.html#l00060">60</a> pliku <a class="el" href="../../d7/d65/algorytmy_8c_source.html">algorytmy.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>{</div>
+<div class="line"><span class="lineno">   62</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;N;i++){</div>
+<div class="line"><span class="lineno">   63</span>        A[i] = rand()%(MAX-MIN+1)+MIN;</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+<div class="line"><span class="lineno">   65</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acdff47b5e7ee0d55b4e375d07e27e383" name="acdff47b5e7ee0d55b4e375d07e27e383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdff47b5e7ee0d55b4e375d07e27e383">&#9670;&nbsp;</a></span>wymien()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wymien </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wymienia wartości dwóch argumentów w jednym miejscu. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">A</td><td>Wskaźnik wartości pierwszej </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">B</td><td>Wskaźnik wartości drugiej </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="../../d7/d65/algorytmy_8c_source.html#l00014">14</a> pliku <a class="el" href="../../d7/d65/algorytmy_8c_source.html">algorytmy.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>{</div>
+<div class="line"><span class="lineno">   16</span>    *A = *A ^ *B;</div>
+<div class="line"><span class="lineno">   17</span>    *B = *A ^ *B;</div>
+<div class="line"><span class="lineno">   18</span>    *A = *A ^ *B;</div>
+<div class="line"><span class="lineno">   19</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af93a3e771e992079f7545543c4c2ac53" name="af93a3e771e992079f7545543c4c2ac53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af93a3e771e992079f7545543c4c2ac53">&#9670;&nbsp;</a></span>zarezerwuj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int * zarezerwuj </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>N</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zarezerwuje miejsce w pamięci dla łańcuchu liczb całkowitych. </p>
+<p >Zarezerwuje miejsce w pamięci dla łańcuchu liczb całkowitych o długosci N, i zwraca adres początkowy nowo zarezerwowanego miejsca.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">N</td><td>Długość łańcuchu</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Adres początkowy nowo zarezerwowanego miejsca </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="../../d7/d65/algorytmy_8c_source.html#l00032">32</a> pliku <a class="el" href="../../d7/d65/algorytmy_8c_source.html">algorytmy.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>{</div>
+<div class="line"><span class="lineno">   34</span>    <span class="keywordflow">return</span> (<span class="keywordtype">int</span>*) malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">int</span>)*N);</div>
+<div class="line"><span class="lineno">   35</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>
