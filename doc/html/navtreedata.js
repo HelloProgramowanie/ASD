@@ -22,10 +22,24 @@
 
  @licend  The above is the entire license notice for the JavaScript code in this file
 */
-var menudata={children:[
-{text:"Strona główna",url:"index.html"},
-{text:"Pliki",url:"files.html",children:[
-{text:"Lista plików",url:"files.html"},
-{text:"Globalne",url:"globals.html",children:[
-{text:"Wszystko",url:"globals.html"},
-{text:"Funkcje",url:"globals_func.html"}]}]}]}
+var NAVTREE =
+[
+  [ "Algorytmy i Struktury Danych", "index.html", [
+    [ "ASD = Algorytmy i Struktury Danych", "index.html", null ],
+    [ "Pliki", "files.html", [
+      [ "Lista plików", "files.html", "files_dup" ],
+      [ "Globalne", "globals.html", [
+        [ "Wszystko", "globals.html", null ],
+        [ "Funkcje", "globals_func.html", null ]
+      ] ]
+    ] ]
+  ] ]
+];
+
+var NAVTREEINDEX =
+[
+"ASD_8c.html"
+];
+
+var SYNCONMSG = 'click to disable panel synchronisation';
+var SYNCOFFMSG = 'click to enable panel synchronisation';

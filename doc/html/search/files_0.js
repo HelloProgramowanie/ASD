@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['algorytmy_2ec_0',['algorytmy.c',['../d7/d65/algorytmy_8c.html',1,'']]]
+  ['asd_2ec_0',['ASD.c',['../ASD_8c.html',1,'']]]
 ];
