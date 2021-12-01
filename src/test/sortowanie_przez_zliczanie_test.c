@@ -13,7 +13,7 @@ int main(){
     drukuj_lancuch(t1,N);
 
     printf("\nsortowanie przez zliczanie\n");
-    sortowanie_przez_zliczanie(t1, t2, N, MAX);
+    sortowanie_przez_zliczanie(t1, t2, N, MIN, MAX);
 
     drukuj_lancuch(t2,N);
 

@@ -1,7 +1,7 @@
 /**
- * @file
- * @brief Algorytmy i struktury danych
- *
+ * @brief Algorytmy i Struktury Danych
+ * 
+ * @author Ali David
  */
 #include "ASD.h"
 
@@ -20,11 +20,13 @@ void init_Stos(Stos* S, int rozmiar)
 }
 
 /**
- * @brief Dodaje element do Stosu S.
+ * @brief Dodaje nowy element X do Stosu S.
  * 
  * @param[in, out] S Stos do którego trzeba dodać element.
  * @param[in] X Nowy element co trzeba dodać do Stosu.
  * 
+ * @warning Jeżeli Stos S jest pełny przed próbą dodawania nowego
+ *          elementu to program się wyłącza.
  */
 void push_Stos(Stos* S, int X)
 {
@@ -38,6 +40,10 @@ void push_Stos(Stos* S, int X)
  * 
  * @param[in, out] S Stos z którego trzeba zabrać element.
  * 
+ * @returns Górny element ze stosu S.
+ * 
+ * @warning Jeżeli Stos S jest pusty przed próbą zabierania elementu
+ *          to program się wyłącza.
  */
 int pop_Stos(Stos* S)
 {
@@ -80,6 +86,7 @@ void push_Kolejka(Kolejka* K, int X)
  * 
  * @param[in, out] K Kolejka z której trzeba zabrać element.
  * 
+ * @returns Pierwszy element z kolejki K.
  * @todo sprawdzanie underflow
  */
 int pop_Kolejka(Kolejka* K)
@@ -359,38 +366,44 @@ int sortowanie_szybkie_podziel(int* A, int P, int R)
 
 /**
  * @brief Sortowanie przez zliczanie elementów łańcuchu liczb 
- *        całowitych o ograniczonej wartości 0<=A[0..N]<=MAX.
+ *        całowitych o ograniczonej wartości MIN<=A[0..N]<=MAX.
  * 
  * @details Posortuje elementów łańcuchu liczb całowitych A o 
- *          ograniczonej wartości 0<=A[0..N]<=MAX. Złożoność
- *          czasowa: O(N+K), złożność pamięciowa O(N+K). Trzeba
- *          koniecznie wiedzieć do jakiego zakresu należą liczby
- *          do sortowania. Ani raz nie porównuje wartości łańcuchu
- *          A do siebie, tylko je zlicza.
+ *          ograniczonej wartości MIN<=A[0..N]<=MAX. Złożoność
+ *          czasowa: O(N+K), złożność pamięciowa O(N+K), gdzie
+ *          K = MAX-MIN+1. 
+ * 
+ *          Trzeba koniecznie wiedzieć do jakiego zakresu należą 
+ *          liczby do sortowania. 
+ * 
+ *          Ani raz nie porównuje wartości łańcuchu A do siebie,
+ *          tylko je zlicza.
  *
  * @param[in] A Łańcuch liczb całkowitych
  * @param[out] B Łańcuch liczb całkowitych
  * @param[in] N Długość łańcuchu
- * @param[in] MAX górne ograniczenie wartości A[i]
+ * @param[in] MIN minimalna wartość danych zachowanych w A
+ * @param[in] MAX maksymalna wartość danych zachowanych w A
  * 
  */
-void sortowanie_przez_zliczanie(int* A, int* B, int N, int K)
+void sortowanie_przez_zliczanie(const int* A, int* B, int N, int MIN, int MAX)
 {
+    int K = MAX-MIN+1;
     int* C=zarezerwuj(K+1);
-    for(int i=0;i<=K;i++)
+    for(int i=0;i<K;i++)
     {
         C[i]=0;
     }
     for(int j=0; j<N; j++)
     {
-        C[A[j]]++;
+        C[A[j]-MIN]++;
     }
-    for(int i=0;i<=K;i++)
+    for(int i=0;i<K;i++)
     {
         C[i] += C[i-1];
     }
     for(int j=N-1; j>=0; j--)
     {
-        B[--C[A[j]]] = A[j];
+        B[--C[A[j]-MIN]] = A[j];
     }
 }

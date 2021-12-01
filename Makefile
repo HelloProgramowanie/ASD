@@ -10,9 +10,10 @@ test := Stos
 
 .PHONY: all clean run doc
 
+all: $(TEST_EXECUTABLES)
 
 doc:
-	rm -f -r doc/*
+	rm -f -r doc/html/* doc/rtf/*
 	doxygen dconfig
 
 run: all
@@ -20,8 +21,6 @@ run: all
 
 clean:
 	rm -rf ./bin ./obj
-
-all: $(TEST_EXECUTABLES)
 
 $(BIN)/test/%: $(OBJ)/test/%.o $(OBJ)/ASD.o | $(BIN)/test/
 	gcc -o $@ $< $(OBJ)/ASD.o
