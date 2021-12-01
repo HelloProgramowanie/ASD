@@ -26,6 +26,7 @@ var NAVTREE =
 [
   [ "Algorytmy i Struktury Danych", "index.html", [
     [ "ASD = Algorytmy i Struktury Danych", "index.html", null ],
+    [ "Lista rzeczy do zrobienia", "todo.html", null ],
     [ "Pliki", "files.html", [
       [ "Lista plików", "files.html", "files_dup" ],
       [ "Globalne", "globals.html", [
