@@ -3,11 +3,15 @@
 
 int main(){
 	Stos s;
+	printf("Inicjalizacja Stosu.\n");
 	init_Stos(&s, 8);
+	printf("Dodawanie 1 do Stosu.\n");
 	push_Stos(&s,1);
+	printf("Dodawanie 2 do Stosu.\n");
 	push_Stos(&s,2);
+	printf("Dodawanie 3 do Stosu.\n");
 	push_Stos(&s,3);
-	printf("%d ",pop_Stos(&s));
-	printf("%d\n",pop_Stos(&s));
+	printf("Zabranie elementu ze Stosu: %d\n",pop_Stos(&s));
+	printf("Zabranie elementu ze Stosu: %d\n",pop_Stos(&s));
 	return 0;
 }

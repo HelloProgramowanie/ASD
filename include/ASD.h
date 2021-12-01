@@ -17,11 +17,11 @@ typedef struct {
 	int gora;
 } Stos;
 
-void init_Stos(Stos* s, int rozmiar);
+void init_Stos(Stos* S, int rozmiar);
 
-void push_Stos(Stos* s, int x);
+void push_Stos(Stos* S, int X);
 
-int pop_Stos(Stos* s);
+int pop_Stos(Stos* S);
 
 typedef struct {
 	int *d;
@@ -30,11 +30,11 @@ typedef struct {
 	int koniec;
 } Kolejka;
 
-void init_Kolejka(Kolejka* k, int rozmiar);
+void init_Kolejka(Kolejka* K, int rozmiar);
 
-void push_Kolejka(Kolejka* k, int x);
+void push_Kolejka(Kolejka* K, int X);
 
-int pop_Kolejka(Kolejka* k);
+int pop_Kolejka(Kolejka* K);
 
 typedef struct ElementListy{
 	int d;

@@ -5,46 +5,88 @@
  */
 #include "ASD.h"
 
-void init_Stos(Stos* s, int rozmiar)
+/**
+ * @brief Inicjalizuje Stos.
+ * 
+ * @param[in, out] S Nowy Stos.
+ * @param[in] rozmiar Maksymalna ilość elementów w Stosie.
+ * 
+ */
+void init_Stos(Stos* S, int rozmiar)
 {
-	s->d = (int*)malloc(sizeof(int)*rozmiar);
-	s->rozmiar = rozmiar;
-	s->gora = 0;
+	S->d = (int*)malloc(sizeof(int)*rozmiar);
+	S->rozmiar = rozmiar;
+	S->gora = 0;
 }
 
-void push_Stos(Stos* s, int x)
+/**
+ * @brief Dodaje element do Stosu S.
+ * 
+ * @param[in, out] S Stos do którego trzeba dodać element.
+ * @param[in] X Nowy element co trzeba dodać do Stosu.
+ * 
+ */
+void push_Stos(Stos* S, int X)
 {
-	s->gora+=1;
-	if(s->gora>=s->rozmiar) exit(1); 
-	s->d[s->gora]=x;
+	S->gora+=1;
+	if(S->gora>=S->rozmiar) exit(1); 
+	S->d[S->gora]=X;
 }
 
-int pop_Stos(Stos* s)
+/**
+ * @brief Zabierze element ze Stosu S.
+ * 
+ * @param[in, out] S Stos z którego trzeba zabrać element.
+ * 
+ */
+int pop_Stos(Stos* S)
 {
-	if(s->gora==0) exit(1);
-	return s->d[s->gora--];
+	if(S->gora==0) exit(1);
+	return S->d[S->gora--];
 }
 
-void init_Kolejka(Kolejka* k, int rozmiar)
+/**
+ * @brief Inicjalizuje Kolejkę.
+ * 
+ * @param[in, out] K Nowa Kolejka.
+ * @param[in] rozmiar Maksymalna ilość elementów Kolejki.
+ * 
+ */
+void init_Kolejka(Kolejka* K, int rozmiar)
 {
-	k->d = (int*)malloc(sizeof(int)*rozmiar);
-	k->rozmiar = rozmiar;
-	k->poczatek = 0;
-	k->koniec = 0;
+	K->d = (int*)malloc(sizeof(int)*rozmiar);
+	K->rozmiar = rozmiar;
+	K->poczatek = 0;
+	K->koniec = 0;
 }
 
-void push_Kolejka(Kolejka* k, int x)
+/**
+ * @brief Dodaje element do Kolejki K.
+ * 
+ * @param[in, out] K Kolejka do której trzeba dodać element.
+ * @param[in] X Nowy element co trzeba dodać do Kolejki.
+ * 
+ * @todo sprawdzanie overflow
+ */
+void push_Kolejka(Kolejka* K, int X)
 {
-	k->d[k->koniec]=x;
-	if(k->koniec==k->rozmiar-1) k->koniec = 0;
-	else k->koniec++; 
+	K->d[K->koniec]=X;
+	if(K->koniec==K->rozmiar-1) K->koniec = 0;
+	else K->koniec++; 
 }
 
-int pop_Kolejka(Kolejka* k)
+/**
+ * @brief Zabierze element z kolejki K.
+ * 
+ * @param[in, out] K Kolejka z której trzeba zabrać element.
+ * 
+ * @todo sprawdzanie underflow
+ */
+int pop_Kolejka(Kolejka* K)
 {
-	int temp = k->d[k->poczatek];
-	if(k->poczatek==k->rozmiar-1) k->poczatek = 0;
-	else k->poczatek++;
+	int temp = K->d[K->poczatek];
+	if(K->poczatek==K->rozmiar-1) K->poczatek = 0;
+	else K->poczatek++;
 	return temp;
 }
 
@@ -59,9 +101,14 @@ int pop_Kolejka(Kolejka* k)
 void wymien(int* A, int* B)
 
 {
+    /*
     *A = *A ^ *B;
     *B = *A ^ *B;
     *A = *A ^ *B;
+    */
+    int temp = *A;
+    *A = *B;
+    *B = temp;
 }
 
 /**
@@ -129,7 +176,7 @@ void drukuj_lancuch(int* A, int N)
 {
     for(int i=0;i<N;i++)
     {
-        printf("%3d", A[i]);
+        printf("%5d", A[i]);
     }
     printf("\n");
 }
@@ -139,7 +186,7 @@ void drukuj_lancuch(int* A, int N)
  *        całowitych.
  * 
  * @details Posortuje elementy łańcuchu liczb całowitych A o długości 
- *          N w jednym miejscu.
+ *          N w jednym miejscu. Złożoność czasowa: Θ(N²)
  * 
  * @param[in, out] A Łańcuch liczb całkowitych
  * @param[in] N Długość łańcuchu A
@@ -168,6 +215,7 @@ void sortowanie_przez_wstawianie(int* A, int N)
  * 
  * @details Posortuje elementów łańcuchu liczb całowitych A od 
  *          elementu nr P do elementu nr R w jednym miejscu. 
+ *          Złożoność czasowa: Θ(N*lg(N))
  *
  * @param[in, out] A Łańcuch liczb całkowitych
  * @param[in] P Indeks elementu początkowego
@@ -189,8 +237,8 @@ void sortowanie_grzebieniowe(int* A, int P, int R)
 /**
  * @brief Funkcja pomocnicza do sortowania grzebieniowego.
  * 
- * @details Posortuje łańcuch liczb całowitych A od elementu nr P do
- *          elementu numer R w jednym miejscu. 
+ * @details Posortuje elementów łańcuchu liczb całowitych A od
+ *          elementu nr P do elementu nr R w jednym miejscu.
  * 
  * @param[in, out] A Łańcuch liczb całkowitych
  * @param[in] P Indeks elementu początkowego
@@ -235,7 +283,7 @@ void sortowanie_grzebieniowe_grzeb(int* A, int P, int Q, int R)
  * @brief Sortowanie bąbelkowe elementów łańcuchu liczb całowitych.
  * 
  * @details Posortuje elementy łańcuchu liczb całowitych A o długości 
- *          N w jednym miejscu.
+ *          N w jednym miejscu. Złożoność czasowa: O(N²)
  * 
  * @param[in, out] A Łańcuch liczb całkowitych
  * @param[in] N Długość łańcuchu
@@ -261,6 +309,7 @@ void sortowanie_babelkowe(int* A, int N)
  * 
  * @details Posortuje elementów łańcuchu liczb całowitych A od 
  *          elementu nr P do elementu nr R w jednym miejscu. 
+ *          Złożoność czasowa: O(N*lg(N)), w najgorszym wypadku O(N²)
  *
  * @param[in, out] A Łańcuch liczb całkowitych
  * @param[in] P Indeks elementu początkowego
@@ -313,7 +362,11 @@ int sortowanie_szybkie_podziel(int* A, int P, int R)
  *        całowitych o ograniczonej wartości 0<=A[0..N]<=MAX.
  * 
  * @details Posortuje elementów łańcuchu liczb całowitych A o 
- *          ograniczonej wartości 0<=A[0..N]<=MAX. 
+ *          ograniczonej wartości 0<=A[0..N]<=MAX. Złożoność
+ *          czasowa: O(N+K), złożność pamięciowa O(N+K). Trzeba
+ *          koniecznie wiedzieć do jakiego zakresu należą liczby
+ *          do sortowania. Ani raz nie porównuje wartości łańcuchu
+ *          A do siebie, tylko je zlicza.
  *
  * @param[in] A Łańcuch liczb całkowitych
  * @param[out] B Łańcuch liczb całkowitych
@@ -321,7 +374,7 @@ int sortowanie_szybkie_podziel(int* A, int P, int R)
  * @param[in] MAX górne ograniczenie wartości A[i]
  * 
  */
-void sortowanie_przez_zliczanie(int* A, int* B, int N, int MAX)
+void sortowanie_przez_zliczanie(int* A, int* B, int N, int K)
 {
     int* C=zarezerwuj(K+1);
     for(int i=0;i<=K;i++)

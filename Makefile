@@ -1,31 +1,42 @@
-bin/main: obj/main.o obj/algorytmy.o obj/struktury_danych.o
-	@echo "Konsolidacja"
-	gcc -o bin/main -Wall obj/main.o obj/algorytmy.o obj/struktury_danych.o
+BIN := ./bin
+OBJ := ./obj
+SRC := ./src
+INCLUDE := ./include
+TEST_C_FILES := $(shell find $(SRC)/test/ -type f -name '*.c')
+TEST_O_FILES := $(patsubst $(SRC)/test/%.c, $(OBJ)/test/%.o, $(TEST_C_FILES))
+TEST_EXECUTABLES := $(patsubst $(SRC)/test/%.c, $(BIN)/test/%, $(TEST_C_FILES))
 
-obj/main.o: src/main.c
-	@echo "Kompilacja"
-	gcc -o obj/main.o -c src/main.c -Wall
+test := Stos
 
-obj/algorytmy.o: src/algorytmy.c
-	@echo "Kompilacja"
-	gcc -o obj/algorytmy.o -c src/algorytmy.c -Wall
+.PHONY: all clean run doc
 
-obj/struktury_danych.o: src/struktury_danych.c
-	@echo "Kompilacja"
-	gcc -o obj/struktury_danych.o -c src/struktury_danych.c -Wall
-
-.PHONY: clean run rerun setup doc
-
-clean:
-	@echo "Sprzatanie starych plikow"
-	rm -f -r bin/* obj/* doc/*
-
-run: bin/main
-	@echo "Uruchomienie"
-	./bin/main
-
-rerun: clean run
 
 doc:
-	@echo "Generowanie dokumentacji"
+	rm -f -r doc/*
 	doxygen dconfig
+
+run: all
+	./bin/test/$(test)_test
+
+clean:
+	rm -rf ./bin ./obj
+
+all: $(TEST_EXECUTABLES)
+
+$(BIN)/test/%: $(OBJ)/test/%.o $(OBJ)/ASD.o | $(BIN)/test/
+	gcc -o $@ $< $(OBJ)/ASD.o
+
+./obj/test/%.o: $(SRC)/test/%.c | $(OBJ)/test/
+	gcc -o $@ -c $< -I./include/ -Wall
+
+./obj/ASD.o: $(SRC)/ASD.c | ./obj/
+	gcc -o $(OBJ)/ASD.o -c $(SRC)/ASD.c -I$(INCLUDE) -Wall
+
+./obj/:
+	mkdir -p ./obj/
+
+./bin/test/:
+	mkdir -p ./bin/test/
+
+./obj/test/:
+	mkdir -p ./obj/test/
