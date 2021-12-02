@@ -24,7 +24,7 @@ make all
 
 ## Uruchomienie testów
 
-Plik ```include/sortowanie.h``` zawiera ustawienia do każdego testu ze sortowaniem. N to rozmiar łańcuchu do sortowania, MIN to minimalna wartość danych, MAX to maksymalna wartość danych.
+Plik `include/sortowanie.h` zawiera ustawienia do każdego testu ze sortowaniem. N to rozmiar łańcuchu do sortowania, MIN to minimalna wartość danych, MAX to maksymalna wartość danych.
 
 Uruchom za pomocą:
 ```bash
@@ -39,6 +39,6 @@ gdzie *nazwa_wybranego_algorytmu_lub_struktury* należy wymienić na
 * sortowanie_przez_zliczanie
 * sortowanie_szybkie
 
-## src/ASD.c oraz include/ASD.h
+## Licencja/ograniczenia
 
-Jeśli chcesz, możesz bez ograniczeń używać części lub całość kodu co znajdziesz w plikach ```src/ASD.c``` oraz ```include/ASD.h```.
+Jeśli chcesz, możesz bez ograniczeń używać części lub całość kodu.

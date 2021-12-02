@@ -1,5 +1,10 @@
-#include "ASD.h"
+/**
+ * @example
+ */
+#define _TEST_
+#include "podstawowe.h"
 #include "sortowanie.h"
+#include "Statyczny_Kopiec.h"
 
 int main(){
     srand((unsigned int)time(NULL));
@@ -11,11 +16,11 @@ int main(){
     printf("\nwygenerowany lancuch liczb calkowitych\n");
     drukuj_lancuch(t,N);
 
-    printf("\nsortowanie szybkie\n");
-    sortowanie_szybkie(t, 0, N-1);
+    printf("\nsortowanie przez kopcowawnie\n");
+    sortowanie_przez_kopcowanie(t, N);
 
     drukuj_lancuch(t,N);
 
     free(t);
-	return 0;
+    return 0;
 }

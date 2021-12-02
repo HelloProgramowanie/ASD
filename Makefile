@@ -1,41 +1,52 @@
-BIN := ./bin
-OBJ := ./obj
-SRC := ./src
-INCLUDE := ./include
-TEST_C_FILES := $(shell find $(SRC)/test/ -type f -name '*.c')
-TEST_O_FILES := $(patsubst $(SRC)/test/%.c, $(OBJ)/test/%.o, $(TEST_C_FILES))
-TEST_EXECUTABLES := $(patsubst $(SRC)/test/%.c, $(BIN)/test/%, $(TEST_C_FILES))
+SRC := src
+TEST := test
+OBJ := obj
+BIN := bin
+INCLUDE := include
 
-test := Stos
+SRCS := $(wildcard $(SRC)/*.c)
+TEST_SRCS := $(wildcard $(SRC)/$(TEST)/*.c)
 
-.PHONY: all clean run doc
+OBJS := $(patsubst $(SRC)/%.c, $(OBJ)/%.o, $(SRCS))
+TEST_OBJS := $(patsubst $(SRC)/$(TEST)/%.c, $(OBJ)/$(TEST)/%.o, $(TEST_SRCS))
 
-all: $(TEST_EXECUTABLES)
+TEST_BINS := $(patsubst $(SRC)/$(TEST)/%.c, $(BIN)/%, $(TEST_SRCS))
 
-doc:
-	rm -f -r doc/html/* doc/rtf/*
-	doxygen dconfig
+test = kopiec
+
+.PHONY: all clean rebuild doc run
 
 run: all
-	./bin/test/$(test)_test
+	$(BIN)/test_$(test)
+
+all: $(TEST_BINS) index.html
+
+$(BIN)/%: $(OBJ)/$(TEST)/%.o $(OBJS) | $(BIN)
+	gcc -o $@ $< $(OBJS)
+
+$(OBJ)/$(TEST)/%.o: $(SRC)/%.c | $(OBJ)/$(TEST)
+	gcc -o $@ -c $< -I$(INCLUDE) -Wall
+
+$(OBJ)/%.o: $(SRC)/%.c | $(OBJ)
+	gcc -o $@ -c $< -I$(INCLUDE) -Wall
+
+$(BIN):
+	mkdir -p $(BIN)
+
+$(OBJ)/$(TEST):
+	mkdir -p $(OBJ)/$(TEST)
+
+$(OBJ):
+	mkdir -p $(OBJ)
+
+index.html: doc doc/html/index.html
+
+doc:
+	rm -rf doc/* manual
+	doxygen dconfig
+	ln -s doc/html/index.html manual
 
 clean:
-	rm -rf ./bin ./obj
+	rm -rf $(BIN)/* $(OBJ)/*.o
 
-$(BIN)/test/%: $(OBJ)/test/%.o $(OBJ)/ASD.o | $(BIN)/test/
-	gcc -o $@ $< $(OBJ)/ASD.o
-
-./obj/test/%.o: $(SRC)/test/%.c | $(OBJ)/test/
-	gcc -o $@ -c $< -I./include/ -Wall
-
-./obj/ASD.o: $(SRC)/ASD.c | ./obj/
-	gcc -o $(OBJ)/ASD.o -c $(SRC)/ASD.c -I$(INCLUDE) -Wall
-
-./obj/:
-	mkdir -p ./obj/
-
-./bin/test/:
-	mkdir -p ./bin/test/
-
-./obj/test/:
-	mkdir -p ./obj/test/
+rebuild: clean all

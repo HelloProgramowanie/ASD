@@ -1,4 +1,8 @@
-#include "ASD.h"
+/**
+ * @example
+ */
+#define _TEST_
+#include "podstawowe.h"
 #include "sortowanie.h"
 
 int main(){

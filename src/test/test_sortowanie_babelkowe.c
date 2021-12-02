@@ -1,4 +1,8 @@
-#include "ASD.h"
+/**
+ * @example
+ */
+#define _TEST_
+#include "podstawowe.h"
 #include "sortowanie.h"
 
 int main(){
@@ -11,8 +15,8 @@ int main(){
     printf("\nwygenerowany lancuch liczb calkowitych\n");
     drukuj_lancuch(t,N);
 
-    printf("\nsortowanie grzebieniowe\n");
-    sortowanie_grzebieniowe(t, 0, N-1);
+    printf("\nsortowanie babelkowe\n");
+    sortowanie_babelkowe(t, N);
 
     drukuj_lancuch(t,N);
 
