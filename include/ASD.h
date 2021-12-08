@@ -10,14 +10,4 @@
 #include "Statyczny_Stos.h"
 #include "Statyczny_Kopiec.h"
 
-/**
- * @brief Element listy.
- * 
- */
-typedef struct ElementListy{
-	int d; /**< Dane */
-	struct ElementListy* nastepny; /**< Następny element listy */
-	struct ElementListy* poprzedni;/**< Poprzedni element listy */
-} ElementListy;
-
 #endif

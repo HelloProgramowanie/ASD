@@ -46,9 +46,33 @@ int lewo_Statyczny_Kopiec(int i);
  */
 int prawo_Statyczny_Kopiec(int i);
 
+/**
+ * @brief Wydrukuje na ekran kopiec (nie warto używać jeśli
+ *        liczba elementów jest większa niż 63).
+ */
 void drukuj_Statyczny_Kopiec(Statyczny_Kopiec* K);
 
+/**
+ * @brief Ważna procedura do operowania na Kopcach.
+ * @details Zakładając że Kopcy z korzeniem 
+ *          lewo_Statyczny_Kopiec(i) oraz prawo_Statyczny_Kopiec(i)
+ *          są Kopicami typu max, ale element o indeksie i może
+ *          być mniejszy od jego 'dzieckami' i w tym wypadku
+ *          Kopiec z korzeniem i już nie jest Kopcem typu max.
+ *          Ta procedura stoczy element o indeksie i w dół w Kopcu tak,
+ *          żeby Kopiec z korzeniem i był Kopcem typu max.
+ * 
+ * @param K Kopiec
+ * @param i Indeks elementu Kopca.
+ */
 void max_kopcuj_Statyczny_Kopiec(Statyczny_Kopiec* K, int i);
 
+/**
+ * @brief Ważna procedura do operowania na Kopcach.
+ * @details Z dołu do góry użyję procedurę max_kopcuj_Statyczny_Kopiec()
+ *          żeby konwertować tablice w Kopiec typu max.
+ * 
+ * @param K Kopiec
+ */
 void buduj_max_kopiec_Statyczny_Kopiec(Statyczny_Kopiec* K);
 #endif

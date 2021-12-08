@@ -24,7 +24,6 @@ typedef struct Statyczny_Stos{
  * 
  */
 void init_Statyczny_Stos(Statyczny_Stos* S, int rozmiar);
-/// @example test_Statyczny_Stos.c
 
 /**
  * @brief Dodaje nowy element X do Statyczny_Stosu S.

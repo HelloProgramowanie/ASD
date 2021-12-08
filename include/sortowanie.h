@@ -137,8 +137,6 @@ void sortowanie_przez_zliczanie(const int* A, int* B, int N, int MIN, int MAX);
 void sortowanie_przez_kopcowanie(int* A, int N);
 /// @example test_sortowanie_przez_kopcowanie.c
 
-
-
 #endif
 
 #ifdef _TEST_

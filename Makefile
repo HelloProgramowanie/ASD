@@ -12,7 +12,7 @@ TEST_OBJS := $(patsubst $(SRC)/$(TEST)/%.c, $(OBJ)/$(TEST)/%.o, $(TEST_SRCS))
 
 TEST_BINS := $(patsubst $(SRC)/$(TEST)/%.c, $(BIN)/%, $(TEST_SRCS))
 
-test = kopiec
+test = Lista
 
 .PHONY: all clean rebuild doc run
 
