@@ -19,16 +19,16 @@ test = Lista
 run: all
 	$(BIN)/test_$(test)
 
-all: $(TEST_BINS) index.html
+all: $(TEST_BINS) 
 
 $(BIN)/%: $(OBJ)/$(TEST)/%.o $(OBJS) | $(BIN)
-	gcc -o $@ $< $(OBJS)
+	gcc -o $@ $< $(OBJS) -Wl,--gc-sections -Os
 
 $(OBJ)/$(TEST)/%.o: $(SRC)/%.c | $(OBJ)/$(TEST)
 	gcc -o $@ -c $< -I$(INCLUDE) -Wall
 
 $(OBJ)/%.o: $(SRC)/%.c | $(OBJ)
-	gcc -o $@ -c $< -I$(INCLUDE) -Wall
+	gcc -o $@ -c $< -I$(INCLUDE) -Wall -ffunction-sections -fdata-sections
 
 $(BIN):
 	mkdir -p $(BIN)

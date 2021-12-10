@@ -42,6 +42,14 @@ typedef struct Lista{
 void init_Lista(Lista* L);
 
 /**
+ * @brief Wydrukuje listę.
+ * 
+ * @param[in, out] L Lista do wydruku.
+ * 
+ */
+void drukuj_Lista(Lista* L);
+
+/**
  * @brief Dodaje element do początku listy.
  * 
  * @param[in, out] L Lista do której trzeba dodać element.
