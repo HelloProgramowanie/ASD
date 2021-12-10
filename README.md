@@ -32,12 +32,17 @@ make run test=nazwa_wybranego_algorytmu_lub_struktury
 ```
 gdzie *nazwa_wybranego_algorytmu_lub_struktury* należy wymienić na
 * Kolejka
+* Lista
 * Stos
 * sortowanie_babelkowe
 * sortowanie_grzebieniowe
+* sortowanie_przez_kopcowanie
 * sortowanie_przez_wstawianie
 * sortowanie_przez_zliczanie
 * sortowanie_szybkie
+* Statyczna_Kolejka
+* Statyczny_Kopiec
+* Statyczny_Stos
 
 ## Licencja/ograniczenia
 
